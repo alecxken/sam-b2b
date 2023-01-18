@@ -15,11 +15,12 @@
 
 
     <!-- Plugins CSS File -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
 
     <!-- Main CSS File -->
     <link rel="stylesheet" href="/css/demo5.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/vendor/fontawesome-free/css/all.min.css">
+     <link rel="stylesheet" href="/assets/css/ll.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/vendor/fontawesome-free/css/all.min.css">
      <link rel="stylesheet" href="{{asset('myfiles/font-awesome/css/font-awesome.min.css')}}">
      <link rel="stylesheet" href="{{asset('assets/vendor/simple-line-icons/css/simple-line-icons.min.css')}}">
 
@@ -40,12 +41,8 @@
                         <div class="header-dropdown dropdown-expanded mr-md-3 mr-lg-0 pr-0 d-none d-lg-block">
                             <div class="header-menu">
                                 <ul>
-                                    <li><a href="dashboard.html">My Account</a></li>
-                                    <li><a href="demo5-about.html">About Us</a></li>
-                                    <li><a href="blog.html">Blog</a></li>
-                                    <li><a href="wishlist.html">My Wishlist</a></li>
-                                    <li><a href="cart.html">Cart</a></li>
-                                    <li><a href="login.html" class="login-link">Log In</a></li>
+                             
+                                    <li><a href="/login" class="login-link">Log In</a></li>
                                 </ul>
                             </div><!-- End .header-menu -->
                         </div><!-- End .header-dropown -->
@@ -132,7 +129,7 @@
 
                         <div class="header-contact d-none d-lg-flex align-items-center ml-auto pl-1  pr-xl-2">
                             <i class="icon-phone-2"></i>
-                            <h6 class="pt-1">Call us now<a href="tel:#" class="text-dark font1">+123 5678 890</a></h6>
+                            <h6 class="pt-1">Call us now<a href="tel:#" class="text-dark font1">+2547</a></h6>
                         </div>
 
                         <a href="login.html" class="header-icon header-icon-user login-link"><i
@@ -201,7 +198,7 @@
                                     <div class="dropdown-cart-action">
                                         <a href="cart.html" class="btn btn-gray btn-block view-cart">View
                                             Cart</a>
-                                        <a href="checkout.html" class="btn btn-dark btn-block">Checkout</a>
+                                        <a href="/productcheckout/{{ csrf_token() }}" class="btn btn-dark btn-block">Checkout</a>
                                     </div><!-- End .dropdown-cart-total -->
                                 </div><!-- End .dropdownmenu-wrapper -->
                             </div><!-- End .dropdown-menu -->
@@ -226,60 +223,7 @@
                                 <li>
                                     <a href="/">Categories</a>
                                     <div class="megamenu megamenu-fixed-width megamenu-3cols">
-                                        <div class="row">
-                                            <div class="col-lg-4">
-                                                <a href="#" class="nolink">VARIATION 1</a>
-                                                <ul class="submenu">
-                                                    <li><a href="category.html">Fullwidth Banner</a></li>
-                                                    <li><a href="category-banner-boxed-slider.html">Boxed Slider
-                                                            Banner</a>
-                                                    </li>
-                                                    <li><a href="category-banner-boxed-image.html">Boxed Image
-                                                            Banner</a>
-                                                    </li>
-                                                    <li><a href="category.html">Left Sidebar</a></li>
-                                                    <li><a href="category-sidebar-right.html">Right Sidebar</a></li>
-                                                    <li><a href="category-off-canvas.html">Off Canvas Filter</a></li>
-                                                    <li><a href="category-horizontal-filter1.html">Horizontal
-                                                            Filter1</a>
-                                                    </li>
-                                                    <li><a href="category-horizontal-filter2.html">Horizontal
-                                                            Filter2</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <a href="#" class="nolink">VARIATION 2</a>
-                                                <ul class="submenu">
-                                                    <li><a href="category-list.html">List Types</a></li>
-                                                    <li><a href="category-infinite-scroll.html">Ajax Infinite Scroll</a>
-                                                    </li>
-                                                    <li><a href="category.html">3 Columns Products</a></li>
-                                                    <li><a href="category-4col.html">4 Columns Products</a></li>
-                                                    <li><a href="category-5col.html">5 Columns Products</a></li>
-                                                    <li><a href="category-6col.html">6 Columns Products</a></li>
-                                                    <li><a href="category-7col.html">7 Columns Products</a></li>
-                                                    <li><a href="category-8col.html">8 Columns Products</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-lg-4 p-0">
-                                                <div class="menu-banner">
-                                                    <figure>
-                                                        <img src="assets/images/menu-banner.jpg" alt="Menu banner"
-                                                            width="300" height="300">
-                                                    </figure>
-                                                    <div class="banner-content">
-                                                        <h4>
-                                                            <span class="">UP TO</span><br />
-                                                            <b class="">50%</b>
-                                                            <i>OFF</i>
-                                                        </h4>
-                                                        <a href="demo5-shop.html" class="btn btn-sm btn-dark">SHOP
-                                                            NOW</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                   
                                     </div><!-- End .megamenu -->
                                 </li>
                                 <li>
@@ -290,149 +234,11 @@
                                 <li><a href="demo5-contact.html">Contact Us</a></li>
                                 <li class="float-right"><a href="" class="pl-3"
                                         target="_blank">Buy Porto!</a></li>
-                                <li class="float-right mr-3"><a href="#" class="pl-5">Special Offer!</a></li>
+                                <li class="float-right mr-3"><a href="/login" class="pl-5">@auth {{Auth::user()->name}} @else Login @endif</a></li>
                             </ul>
                         </nav>
                     </div>
-                    <div class="header-right">
-                        <div class="header-search header-icon header-search-inline header-search-category w-lg-max">
-                            <a href="#" class="search-toggle" role="button"><i class="icon-search-3"></i></a>
-                            <form action="#" method="get">
-                                <div class="header-search-wrapper">
-                                    <input type="search" class="form-control" name="q" id="qqq" placeholder="Search..."
-                                        required>
-                                    <div class="select-custom">
-                                        <select id="category" name="cat">
-                                            <option value="">All Categories</option>
-                                            <option value="4">Fashion</option>
-                                            <option value="12">- Women</option>
-                                            <option value="13">- Men</option>
-                                            <option value="66">- Jewellery</option>
-                                            <option value="67">- Kids Fashion</option>
-                                            <option value="5">Electronics</option>
-                                            <option value="21">- Smart TVs</option>
-                                            <option value="22">- Cameras</option>
-                                            <option value="63">- Games</option>
-                                            <option value="7">Home &amp; Garden</option>
-                                            <option value="11">Motors</option>
-                                            <option value="31">- Cars and Trucks</option>
-                                            <option value="32">- Motorcycles &amp; Powersports</option>
-                                            <option value="33">- Parts &amp; Accessories</option>
-                                            <option value="34">- Boats</option>
-                                            <option value="57">- Auto Tools &amp; Supplies</option>
-                                        </select>
-                                    </div><!-- End .select-custom -->
-                                    <button class="btn p-0 icon-search-3" type="submit"></button>
-                                </div><!-- End .header-search-wrapper -->
-                            </form>
-                        </div><!-- End .header-search -->
-
-                        <a href="login.html" class="header-icon "><i class="icon-user-2"></i></a>
-
-                        <a href="wishlist.html" class="header-icon"><i class="icon-wishlist-2"></i></a>
-
-
-
-                       
-
-                        <div class="dropdown cart-dropdown">
-                            <a href="#" title="Cart" class="dropdown-toggle dropdown-arrow cart-toggle" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
-                                <i class="minicart-icon"></i>
-                                <span class="cart-count badge-circle">{{ count($datas) }}}</span>
-                            </a>
-
-                            <div class="cart-overlay"></div>
-
-                            <div class="dropdown-menu mobile-cart">
-                                <a href="#" title="Close (Esc)" class="btn-close">×</a>
-
-                                <div class="dropdownmenu-wrapper custom-scrollbar">
-                                    <div class="dropdown-cart-header">Shopping Cart</div>
-                                    <!-- End .dropdown-cart-header -->
-
-                                    <div class="dropdown-cart-products">
-                                        <div class="product">
-                                            <div class="product-details">
-                                                <h4 class="product-title">
-                                                    <a href="demo5-product.html">Ultimate 3D Bluetooth Speaker</a>
-                                                </h4>
-
-                                                <span class="cart-product-info">
-                                                    <span class="cart-product-qty">1</span>
-                                                    × Ksh 9900
-                                                </span>
-                                            </div><!-- End .product-details -->
-
-                                            <figure class="product-image-container">
-                                                <a href="demo5-product.html" class="product-image">
-                                                    <img src="assets/images/products/product-1.jpg" alt="product"
-                                                        width="80" height="80">
-                                                </a>
-
-                                                <a href="#" class="btn-remove" title="Remove Product"><span>×</span></a>
-                                            </figure>
-                                        </div><!-- End .product -->
-
-                                        <div class="product">
-                                            <div class="product-details">
-                                                <h4 class="product-title">
-                                                    <a href="demo5-product.html">Brown Women Casual HandBag</a>
-                                                </h4>
-
-                                                <span class="cart-product-info">
-                                                    <span class="cart-product-qty">1</span>
-                                                    × Ksh 3500
-                                                </span>
-                                            </div><!-- End .product-details -->
-
-                                            <figure class="product-image-container">
-                                                <a href="demo5-product.html" class="product-image">
-                                                    <img src="assets/images/products/product-2.jpg" alt="product"
-                                                        width="80" height="80">
-                                                </a>
-
-                                                <a href="#" class="btn-remove" title="Remove Product"><span>×</span></a>
-                                            </figure>
-                                        </div><!-- End .product -->
-
-                                        <div class="product">
-                                            <div class="product-details">
-                                                <h4 class="product-title">
-                                                    <a href="demo5-product.html">Circled Ultimate 3D Speaker</a>
-                                                </h4>
-
-                                                <span class="cart-product-info">
-                                                    <span class="cart-product-qty">1</span>
-                                                    × Ksh 3500
-                                                </span>
-                                            </div><!-- End .product-details -->
-
-                                            <figure class="product-image-container">
-                                                <a href="demo5-product.html" class="product-image">
-                                                    <img src="assets/images/products/product-3.jpg" alt="product"
-                                                        width="80" height="80">
-                                                </a>
-                                                <a href="#" class="btn-remove" title="Remove Product"><span>×</span></a>
-                                            </figure>
-                                        </div><!-- End .product -->
-                                    </div><!-- End .cart-product -->
-
-                                    <div class="dropdown-cart-total">
-                                        <span>SUBTOTAL:</span>
-
-                                        <span class="cart-total-price float-right">$Ksh 3400</span>
-                                    </div><!-- End .dropdown-cart-total -->
-
-                                    <div class="dropdown-cart-action">
-                                        <a href="cart.html" class="btn btn-gray btn-block view-cart">View
-                                            Cart</a>
-                                        <a href="checkout.html" class="btn btn-dark btn-block">Checkout</a>
-                                    </div><!-- End .dropdown-cart-total -->
-                                </div><!-- End .dropdownmenu-wrapper -->
-                            </div><!-- End .dropdown-menu -->
-                        </div><!-- End .dropdown -->
-                    </div>
+                  
                 </div><!-- End .container -->
             </div><!-- End .header-bottom -->
         </header><!-- End .header -->
@@ -616,13 +422,13 @@
     <a id="scroll-top" href="#top" title="Top" role="button"><i class="icon-angle-up"></i></a>
 
     <!-- Plugins JS File -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/plugins.min.js"></script>
-    <script src="assets/js/map.js"></script>
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/plugins.min.js"></script>
+    <script src="/assets/js/map.js"></script>
 
     <!-- Main JS File -->
-    <script src="assets/js/main.min.js"></script>
+    <script src="/assets/js/main.min.js"></script>
 </body>
 
 </html>

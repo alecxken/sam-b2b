@@ -8,14 +8,29 @@
                 <li class="">
                     <a href="{{ url('home') }}" class="noti-dot "><i class="la la-home"></i> <span>Dashboard</span></a>
                 </li>
-                <li class="submenu {{ request()->is('index-product') ? 'active' : '' }}">
+                <li class="submenu {{ request()->is('index-product') ? 'active' : '' }} {{ request()->is('orders') ? 'active' : '' }}">
                     <a href="#"><i class="fa  fa-list-ul"></i> <span>Supplier Module </span> <span
                             class="menu-arrow"></span></a>
                     <ul style="display: none;">
                         <li><a class="{{ request()->is('index-product') ? 'active' : '' }}"
                                 href="{{ url('index-product') }}">Stock Items</a></li>
-                        <li><a class="{{ request()->is('beneficiary') ? 'active' : '' }}"
-                                href="{{ url('beneficiary') }}">Active Orders</a></li>
+                        <li><a class="{{ request()->is('orders') ? 'active' : '' }}"
+                                href="{{ url('orders') }}">Active Orders</a></li>
+                       
+
+                    </ul>
+                </li>
+
+                 <li class="submenu {{ request()->is('index-address') ? 'active' : '' }}  {{ request()->is('index-order') ? 'active' : '' }} {{ request()->is('myorders') ? 'active' : '' }} ">
+                    <a href="#"><i class="fa  fa-list-ul"></i> <span>Retail Module </span> <span
+                            class="menu-arrow"></span></a>
+                    <ul style="display: none;">
+                        <li><a class="{{ request()->is('index-order') ? 'active' : '' }}"
+                                href="{{ url('index-order') }}">Order Products</a></li>
+                        <li><a class="{{ request()->is('myorders') ? 'active' : '' }}"
+                                href="{{ url('myorders') }}">My Orders</a></li>
+                                   <li><a class="{{ request()->is('index-address') ? 'active' : '' }}"
+                                href="{{ url('index-address') }}">Shipping Address</a></li>
                        
 
                     </ul>
