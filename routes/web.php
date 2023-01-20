@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,7 +33,25 @@ Route::middleware('auth')->group(function () {
 
    Route::get('/pay-product/{id}', [ProductController::class, 'pay_product'])->name('pay_product.index');
 
-   
+Route::get('users-index',[UserController::class,'index']);
+
+Route::get('get-user-info/{id}',[UserController::class,'get_user']);
+
+Route::get('users_delete',[UserController::class,'delete_user']);
+
+Route::post('users_store',[UserController::class,'user_store']);
+
+Route::post('users_update',[UserController::class,'update_user']);
+
+Route::get('roles-index',[UserController::class,'roles']);
+
+ Route::post('/roles_store', [UserController::class, 'roles_store'])->name('roles.store');
+
+    Route::get('/user_destroy/{id}', [UserController::class, 'user_destroy'])->name('user.destroy');
+
+    Route::get('/roles_destroy/{id}', [UserController::class, 'destroy'])->name('roles.destroy');
+
+    Route::post('/permissions_store', [UserController::class, 'permissions_store'])->name('permissions.store');
 
 Route::get('/myorders', [ProductController::class, 'view_myorders']);
 

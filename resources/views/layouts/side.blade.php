@@ -60,10 +60,10 @@
                                 href="{{ url('dropdown-settings') }}" class="nav-sub-link">Dropdown Settings</a></li>
 
                         @role('Admin')
-                            <li><a class="{{ request()->is('create_user') ? 'active' : '' }}"
-                                    href="{{ url('create_user') }}" class="nav-sub-link">User Management</a></li>
+                            <li><a class="{{ request()->is('users-index') ? 'active' : '' }}"
+                                    href="{{ url('users-index') }}" class="nav-sub-link">User Management</a></li>
 
-                            <li><a class="{{ request()->is('admin') ? 'active' : '' }}" href="{{ url('admin') }}"
+                            <li><a class="{{ request()->is('roles-index') ? 'active' : '' }}" href="{{ url('roles-index') }}"
                                     class="nav-sub-link">Role Management</a></li>
                         @endrole
 
