@@ -25,17 +25,17 @@
                     <li class="active">
                         <a href="checkout.html">Checkout</a>
                     </li>
-                    <li class="disabled">
+                   <!--  <li class="disabled">
                         <a href="#">Order Complete</a>
-                    </li>
+                    </li> -->
                 </ul>
 
                 <div class="login-form-container">
-                    <h4>Returning customer?
+                  <!--   <h4>Returning customer?
                         <button data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="btn btn-link btn-toggle">Login</button>
-                    </h4>
+                    </h4> -->
 
-                    <div id="collapseOne" class="collapse">
+                <!--     <div id="collapseOne" class="collapse">
                         <div class="login-section feature-box">
                             <div class="feature-box-content">
                                 <form action="#" id="login-form">
@@ -47,14 +47,14 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="mb-0 pb-1">Username or email <span class="required">*</span></label>
-                                                <input type="email" class="form-control" required="">
+                                                <input type="email" class="form-control" >
                                             </div>
                                         </div>
 
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="mb-0 pb-1">Password <span class="required">*</span></label>
-                                                <input type="password" class="form-control" required="">
+                                                <input type="password" class="form-control" >
                                             </div>
                                         </div>
                                     </div>
@@ -73,32 +73,7 @@
                                 </form>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                <div class="checkout-discount">
-                    <h4>Have a coupon?
-                        <button data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne" class="btn btn-link btn-toggle">ENTER YOUR CODE</button>
-                    </h4>
-
-                    <div id="collapseTwo" class="collapse">
-                        <div class="feature-box">
-                            <div class="feature-box-content">
-                                <p>If you have a coupon code, please apply it below.</p>
-
-                                <form action="#">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control form-control-sm w-auto" placeholder="Coupon code" required="">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-sm mt-0" type="submit">
-                                                Apply Coupon
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+                    </div> -->
                 </div>
 
                 <div class="row">
@@ -115,7 +90,7 @@
                                                 <label>First name
                                                     <abbr class="required" title="required">*</abbr>
                                                 </label>
-                                                <input type="text" name="fname" class="form-control" required="">
+                                                <input type="text" name="fname" class="form-control" >
                                             </div>
                                         </div>
 
@@ -123,7 +98,7 @@
                                             <div class="form-group">
                                                 <label>Last name
                                                     <abbr class="required" title="required">*</abbr></label>
-                                                <input type="text" name="lname" class="form-control" required="">
+                                                <input type="text" name="lname" class="form-control" >
                                             </div>  
                                         </div>
                                     </div>
@@ -131,49 +106,28 @@
                                  
 
                                     <div class="form-group">
-                                        <input type="text" name="apartment" class="form-control" placeholder="Apartment, suite, unite, etc. (optional)" required="">
+                                        <input type="text" name="apartment" class="form-control" placeholder="Apartment, suite, unite, etc. (optional)" >
                                     </div>
 
                                     <div class="form-group">
                                         <label>Town / City
                                             <abbr class="required" title="required">*</abbr></label>
-                                        <input type="text"  name="city" class="form-control" required="">
+                                        <input type="text"  name="city" class="form-control" required >
                                     </div>
 
                                    
                                     <div class="form-group">
                                         <label>Street
                                             <abbr class="required" title="required">*</abbr></label>
-                                        <input type="text" name="street" class="form-control" required="">
+                                        <input type="text" name="street" class="form-control" required>
                                     </div>
 
                                     <div class="form-group">
                                         <label>Phone <abbr class="required" title="required">*</abbr></label>
-                                        <input type="tel" name="phone" class="form-control" required="">
+                                        <input type="tel" name="phone" class="form-control" required>
                                     </div>
 
-                                    <div class="form-group">
-                                        <label>Email address
-                                            <abbr class="required" title="required">*</abbr></label>
-                                        <input type="email" name="email" class="form-control" required="">
-                                    </div>
-
-                                    <div class="form-group mb-1">
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="create-account">
-                                            <label class="custom-control-label" data-toggle="collapse" data-target="#collapseThree" aria-controls="collapseThree" for="create-account">Create an
-                                                account?</label>
-                                        </div>
-                                    </div>
-
-                                    <div id="collapseThree" class="collapse">
-                                        <div class="form-group">
-                                            <label>Create account password
-                                                <abbr class="required" title="required">*</abbr></label>
-                                            <input type="password" placeholder="Password" class="form-control" required="">
-                                        </div>
-                                    </div>
-
+                                  
                                     <div class="form-group">
                                         <div class="custom-control custom-checkbox mt-0">
                                             <input type="checkbox" class="custom-control-input" id="different-shipping">
@@ -188,7 +142,7 @@
                                   
                                     <div class="form-group">
                                         <label class="order-comments">Order notes (optional)</label>
-                                        <textarea name="order-notes" class="form-control" placeholder="Notes about your order, e.g. special notes for delivery." required=""></textarea>
+                                        <textarea name="order-notes" class="form-control" placeholder="Notes about your order, e.g. special notes for delivery." ></textarea>
                                     </div>
                                 
                             </li>
@@ -207,7 +161,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                	 @php  $datas = \App\Models\Cart::leftJoin('products', 'products.id', '=', 'carts.product_id')->where('_token',csrf_token())->select('carts.*','products.product_name', 'products.sell_price','products.photos')->get();    @endphp
+                                	 @php  $datas = \App\Models\Cart::leftJoin('products', 'products.id', '=', 'carts.product_id')->where('user_id', null)->where('_token',csrf_token())->select('carts.*','products.product_name', 'products.sell_price','products.photos')->get();    @endphp
                                 	@php $total = 0 @endphp
 
                                         @isset($datas)

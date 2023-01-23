@@ -55,7 +55,7 @@ class RegisteredUserController extends Controller
                      $rol = Role::where('name', '=', $roles)->first();
                      if(!empty($rol))
                      {
-                         $user->assignRole($role);
+                         $user->assignRole($rol);
                      }
 
          }

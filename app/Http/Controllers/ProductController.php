@@ -281,6 +281,11 @@ public function checkout_post(Request $request)
 {
     # code...pk]k
 
+    if(Auth::check())
+    {
+        return back()->with('status','ggg');
+    }
+
     $data = new CustomerAddress();
 
     $data->_token = $request['_token'];
@@ -310,7 +315,7 @@ public function checkout_post(Request $request)
     $data->save();
 
      \DB::table('carts')->where('_token', $request['_token'])
-    ->update(['user_id'=>$request['email']]);
+    ->update(['user_id'=>\Auth::user()->email]);
 
      $qty= Cart::where('_token',$request['_token'])->sum('qty');
 

@@ -23,7 +23,7 @@
                     </ul>
                 </li>
                 @endhasanyrole
-                @hasanyrole('Supplier|Admin')
+                @hasanyrole('Retailer|Admin')
 
                  <li class="submenu {{ request()->is('index-address') ? 'active' : '' }}  {{ request()->is('index-order') ? 'active' : '' }} {{ request()->is('myorders') ? 'active' : '' }} ">
                     <a href="#"><i class="fa  fa-list-ul"></i> <span>Retail Module </span> <span
