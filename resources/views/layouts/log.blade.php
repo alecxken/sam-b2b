@@ -33,7 +33,7 @@
 		<!-- Main Wrapper -->
         <div class="main-wrapper">
 			<div class="account-content">
-				<a href="{{url('jobs')}}" class="btn btn-primary apply-btn">Go Home</a>
+				<a href="{{url('')}}" class="btn btn-primary apply-btn">Go Home</a>
 				<div class="container">
 				
 					<!-- Account Logo -->

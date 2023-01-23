@@ -31,55 +31,7 @@
     
 
         <header class="header">
-            <div class="header-top">
-                <div class="container">
-                    <div class="header-left d-none d-sm-block">
-                        <p class="top-message text-uppercase">FREE Returns. Standard Shipping Orders $99+</p>
-                    </div><!-- End .header-left -->
-
-                    <div class="header-right header-dropdowns ml-0 ml-sm-auto w-sm-100">
-                        <div class="header-dropdown dropdown-expanded mr-md-3 mr-lg-0 pr-0 d-none d-lg-block">
-                            <div class="header-menu">
-                                <ul>
-                             
-                                    <li><a href="/login" class="login-link">Log In</a></li>
-                                </ul>
-                            </div><!-- End .header-menu -->
-                        </div><!-- End .header-dropown -->
-
-                        <span class="separator d-none d-lg-inline-block"></span>
-
-                        <div class="header-dropdown pr-0">
-                            <a href="#">USD</a>
-                            <div class="header-menu">
-                                <ul>
-                                    <li><a href="#">EUR</a></li>
-                                    <li><a href="#">USD</a></li>
-                                </ul>
-                            </div><!-- End .header-menu -->
-                        </div><!-- End .header-dropown -->
-
-                        <div class="header-dropdown ml-0 ml-md-4 mr-auto mr-sm-3 mr-md-0">
-                            <a href="#"><i class="flag-us flag"></i>ENG</a>
-                            <div class="header-menu">
-                                <ul>
-                                    <li><a href="#"><i class="flag-us flag mr-2"></i>ENG</a>
-                                    </li>
-                                    <li><a href="#"><i class="flag-fr flag mr-2"></i>FRA</a></li>
-                                </ul>
-                            </div><!-- End .header-menu -->
-                        </div><!-- End .header-dropown -->
-
-                        <span class="separator"></span>
-
-                        <div class="social-icons">
-                            <a href="#" class="social-icon social-facebook icon-facebook" target="_blank"></a>
-                            <a href="#" class="social-icon social-twitter icon-twitter" target="_blank"></a>
-                            <a href="#" class="social-icon social-instagram icon-instagram" target="_blank"></a>
-                        </div><!-- End .social-icons -->
-                    </div><!-- End .header-right -->
-                </div><!-- End .container -->
-            </div>
+           
 
             <div class="header-middle sticky-header" data-sticky-options="{'mobile': true}">
                 <div class="container">
@@ -98,32 +50,7 @@
                             class="header-icon header-icon header-search header-search-inline header-search-category w-lg-max ml-3 mr-xl-4">
                             <a href="#" class="search-toggle" role="button"><i class="icon-search-3"></i></a>
                             <form action="#" method="get">
-                                <div class="header-search-wrapper">
-                                    <input type="search" class="form-control" name="q" id="q" placeholder="Search..."
-                                        required="">
-                                    <div class="select-custom">
-                                        <select id="cat" name="cat">
-                                            <option value="">All Categories</option>
-                                            <option value="4">Fashion</option>
-                                            <option value="12">- Women</option>
-                                            <option value="13">- Men</option>
-                                            <option value="66">- Jewellery</option>
-                                            <option value="67">- Kids Fashion</option>
-                                            <option value="5">Electronics</option>
-                                            <option value="21">- Smart TVs</option>
-                                            <option value="22">- Cameras</option>
-                                            <option value="63">- Games</option>
-                                            <option value="7">Home &amp; Garden</option>
-                                            <option value="11">Motors</option>
-                                            <option value="31">- Cars and Trucks</option>
-                                            <option value="32">- Motorcycles &amp; Powersports</option>
-                                            <option value="33">- Parts &amp; Accessories</option>
-                                            <option value="34">- Boats</option>
-                                            <option value="57">- Auto Tools &amp; Supplies</option>
-                                        </select>
-                                    </div><!-- End .select-custom -->
-                                    <button class="btn icon-magnifier" type="submit"></button>
-                                </div><!-- End .header-search-wrapper -->
+                               
                             </form>
                         </div><!-- End .header-search -->
 
@@ -232,9 +159,12 @@
                                
                                                
                                 <li><a href="demo5-contact.html">Contact Us</a></li>
-                                <li class="float-right"><a href="" class="pl-3"
-                                        target="_blank">Buy Porto!</a></li>
+                                
                                 <li class="float-right mr-3"><a href="/login" class="pl-5">@auth {{Auth::user()->name}} @else Login @endif</a></li>
+                                @auth
+                                @else
+                                <li class="float-right"><a href="/register" class="pl-3"
+                                        target="_blank">Register!</a></li>@endif
                             </ul>
                         </nav>
                     </div>

@@ -10,6 +10,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
 
 class RegisteredUserController extends Controller
 {
@@ -44,6 +46,22 @@ class RegisteredUserController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
+
+
+          $roles = $request['roles']; //Retreive all roles
+         if (isset($roles)) {
+
+              
+                     $rol = Role::where('name', '=', $roles)->first();
+                     if(!empty($rol))
+                     {
+                         $user->assignRole($role);
+                     }
+
+         }
+
+
+
 
         event(new Registered($user));
 

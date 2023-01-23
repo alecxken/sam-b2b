@@ -8,6 +8,8 @@
                 <li class="">
                     <a href="{{ url('home') }}" class="noti-dot "><i class="la la-home"></i> <span>Dashboard</span></a>
                 </li>
+
+                @hasanyrole('Supplier|Admin')
                 <li class="submenu {{ request()->is('index-product') ? 'active' : '' }} {{ request()->is('orders') ? 'active' : '' }}">
                     <a href="#"><i class="fa  fa-list-ul"></i> <span>Supplier Module </span> <span
                             class="menu-arrow"></span></a>
@@ -20,6 +22,8 @@
 
                     </ul>
                 </li>
+                @endhasanyrole
+                @hasanyrole('Supplier|Admin')
 
                  <li class="submenu {{ request()->is('index-address') ? 'active' : '' }}  {{ request()->is('index-order') ? 'active' : '' }} {{ request()->is('myorders') ? 'active' : '' }} ">
                     <a href="#"><i class="fa  fa-list-ul"></i> <span>Retail Module </span> <span
@@ -35,7 +39,9 @@
 
                     </ul>
                 </li>
+                 @endhasanyrole
 
+                 @role('Admin')
                 <li class="submenu">
                     <a href="#"><i class="fa fa-files-o"></i> <span> Report Module </span> <span
                             class="menu-arrow"></span></a>
@@ -44,7 +50,7 @@
                                 href="{{ url('disbursement-report') }}">Disbursement Report</a></li>
 
                         <li><a class="{{ request()->is('mail-report') ? 'active' : '' }}"
-                                href="{{ url('mail-report') }}">Beneficiary Status </a></li>
+                                href="{{ url('mail-report') }}"> Status Report </a></li>
 
 
                     </ul>
@@ -69,6 +75,7 @@
 
                     </ul>
                 </li>
+                @endrole
 
 
 
