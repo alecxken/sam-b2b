@@ -281,9 +281,9 @@ public function checkout_post(Request $request)
 {
     # code...pk]k
 
-    if(Auth::check())
+   if (!Auth::user()) 
     {
-        return back()->with('status','ggg');
+        return back()->with('status','You Need to register');
     }
 
     $data = new CustomerAddress();
@@ -306,11 +306,11 @@ public function checkout_post(Request $request)
 
     $data->order = $request['order'];
 
-    $data->total = $request['total'];
+    // $data->total = $request['total'];
 
-    $data->radio = $request['radio'];
+    // $data->radio = $request['radio'];
 
-        $data->user_id = $request['email'];
+        $data->user_id = \Auth::user()->email;
 
     $data->save();
 
@@ -320,6 +320,8 @@ public function checkout_post(Request $request)
      $qty= Cart::where('_token',$request['_token'])->sum('qty');
 
      $price= Cart::where('_token',$request['_token'])->sum('price');
+
+     
 
     $data = new Order();
     $data->_token = 'EKE-'.rand(1000,100000);

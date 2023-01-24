@@ -127,6 +127,11 @@
                                         <input type="tel" name="phone" class="form-control" required>
                                     </div>
 
+                                      <div class="form-group">
+                                        <label>Email <abbr class="required" title="required">*</abbr></label>
+                                        <input type="email" name="email" class="form-control" required>
+                                    </div>
+
                                   
                                     <div class="form-group">
                                         <div class="custom-control custom-checkbox mt-0">
