@@ -24,6 +24,13 @@ use App\DataTables\OrderDataTable;
 
 use App\DataTables\OrderMineDataTable;
 
+use App\DataTables\ProductsDataTable;
+
+use App\DataTables\OrdersDataTable;
+
+use App\DataTables\UsersDataTable;
+
+
 USE DB;
 
 use Auth;
@@ -321,7 +328,7 @@ public function checkout_post(Request $request)
 
      $price= Cart::where('_token',$request['_token'])->sum('price');
 
-     
+
 
     $data = new Order();
     $data->_token = 'EKE-'.rand(1000,100000);
@@ -339,6 +346,28 @@ public function checkout_post(Request $request)
 
 
 
+}
+
+    public function mobile_settings($id)
+{
+        $datatables = [
+
+            'products' => new ProductsDataTable(),
+            'orders' => new OrdersDataTable(),
+            'users' => new UsersDataTable(),
+          
+        ];
+        if (array_key_exists($id, $datatables))
+        {
+
+            $type = $id;
+            
+            return $datatables[$id]->render('product.reports',compact('type'));
+        }
+     else
+     {
+       // code to handle when id is not matched
+    }
 }
 
 }

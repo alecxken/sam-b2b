@@ -6,7 +6,7 @@
                     <span>Admin Menu</span>
                 </li>
                 <li class="">
-                    <a href="{{ url('home') }}" class="noti-dot "><i class="la la-home"></i> <span>Dashboard</span></a>
+                    <a href="{{ url('dashboard') }}" class="noti-dot "><i class="la la-home"></i> <span>Dashboard</span></a>
                 </li>
 
                 @hasanyrole('Supplier|Admin')
@@ -46,11 +46,14 @@
                     <a href="#"><i class="fa fa-files-o"></i> <span> Report Module </span> <span
                             class="menu-arrow"></span></a>
                     <ul style="display: none;">
-                        <li><a class="{{ request()->is('disbursement-report') ? 'active' : '' }}"
-                                href="{{ url('disbursement-report') }}">Disbursement Report</a></li>
+                        <li><a class="{{ request()->is('reports\users') ? 'active' : '' }}"
+                                href="{{ url('reports\users') }}">Users Report</a></li>
 
-                        <li><a class="{{ request()->is('mail-report') ? 'active' : '' }}"
-                                href="{{ url('mail-report') }}"> Status Report </a></li>
+                        <li><a class="{{ request()->is('reports\products') ? 'active' : '' }}"
+                                href="{{ url('reports\products') }}"> Products Report </a></li>
+
+                                 <li><a class="{{ request()->is('reports\orders') ? 'active' : '' }}"
+                                href="{{ url('reports\orders') }}"> Orders Report </a></li>
 
 
                     </ul>

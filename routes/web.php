@@ -85,6 +85,7 @@ Route::get('/index-address', [ProductController::class, 'view_addresses'])->name
 
       Route::post('/checkout-post', [ProductController::class, 'checkout_post'])->name('checkout.cart');
 
+     Route::get('/reports/{id}', [ProductController::class, 'mobile_settings']);
 
 
 require __DIR__.'/auth.php';
